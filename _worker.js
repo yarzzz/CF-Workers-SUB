@@ -42,7 +42,7 @@ export default {
 		}
 		subconfig = env.SUBCONFIG || subconfig;
 		FileName = env.SUBNAME || FileName;
-		MainData = env.KV.get("LINK") || MainData;
+		MainData = await env.KV.get("LINK");
 		if(env.LINKSUB) urls = await ADD(env.LINKSUB);
 
 		const currentDate = new Date();
